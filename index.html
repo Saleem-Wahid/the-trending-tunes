@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Trending Tunes</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
+    type="text/css">
+  <link href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/quasar@2.6.6/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@^4.0.0/animate.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#music">Music</a>
+        <input type="text" placeholder="Search...">
+      </div>
+    </header>
+    <script src="script.js"></script>
+
+    <center>
+      <h1>Trending Tunes</h1>
+      <h4>Listen to the newest, hotest and trending songs</h4>
+    </center>
+
+    <center>
+      <section>
+        <a href="#hotmusic">
+          <div class="row">
+            <div class="column">
+              <div class="container">
+                <img src="https://i.scdn.co/image/ab67706f00000003e9bde2c1b89ec9aa3c9c0a30" class="image">
+                <div class="overlay">
+                  <div class="text">Hot</div>
+                </div>
+              </div>
+            </div>
+        </a>
+
+        <a href="#trendingmusic">
+          <div class="column">
+            <div class="container">
+              <img src="https://i.scdn.co/image/ab67706f00000003e9bde2c1b89ec9aa3c9c0a30" class="image">
+              <div class="overlay">
+                <div class="text">Trending</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#newmusic">
+          <div class="column">
+            <div class="container">
+              <img src="https://i.scdn.co/image/ab67706f00000003e9bde2c1b89ec9aa3c9c0a30" class="image">
+              <div class="overlay">
+                <div class="text">New</div>
+              </div>
+            </div>
+          </div>
+  </div></a>
+  </section>
+  </center>
+
+  <section id="hotmusic">
+    <p class="solid">
+      <center>
+        <h1>Hot Music</h1>
+      </center>
+    </p>
+
+  </section>
+
+  <section id="trendingmusic">
+    <p class="solid">
+      <center>
+        <h1>Trending Music</h1>
+      </center>
+    </p>
+
+
+  </section>
+
+  <section id="newmusic">
+    <p class="solid">
+      <center>
+        <h1>New Music</h1>
+      </center>
+    </p>
+    <q-btn class="message"> {{message}} </q-btn>
+  </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.6.6/dist/quasar.umd.prod.js"></script>
+
+  <script>
+    const app = Vue.createApp({
+      setup() {
+        const message = "Hello!"
+        const client_id = '77413e7632024c3c81c379890c19253d'; // Your client id
+        const client_secret = 'ed4ff73df62844d8b0df62c5b9e3ad9d'; // Your secret
+        const redirect_uri = 'REDIRECT_URI'; // Your redirect uri
+        return {
+          message
+        }
+      }
+    })
+    app.use(Quasar)
+    app.mount('#app')
+  </script>
+
+  <style>
+    .message {
+      background-color: blue;
+      border-radius: 50px;
+    }
+  </style>
+</body>
+
+</html>
